@@ -1,0 +1,61 @@
+import type { BankAccountsSettings } from "@/types/bankAccount";
+
+export const defaultBankAccounts: BankAccountsSettings = {
+  enabled: true,
+  intro:
+    "Siparişinizi havale veya EFT ile ödemek için aşağıdaki hesaplardan size en uygun olanı kullanabilirsiniz. Ödeme sonrasında dekontunuzu sipariş numaranız ile birlikte bize iletmeniz yeterli.",
+  notice:
+    "Açıklama alanına mutlaka sipariş numaranızı yazın. Sipariş numarası belirtilmeyen ödemelerin eşleştirilmesi gecikebilir; bu durumda kargo süreci de uzayabilir.",
+  supportPhone: "0850 222 00 11",
+  supportEmail: "destek@brothersteknoloji.com",
+  accounts: [
+    {
+      id: "bank-1",
+      bankName: "Ziraat Bankası",
+      accountName: "Brothers Teknoloji Ticaret A.Ş.",
+      iban: "TR33 0001 0001 2345 6789 0123 45",
+      branchName: "Kadıköy / İstanbul",
+      branchCode: "0123",
+      accountNumber: "12345678-5001",
+      currency: "TRY",
+      description: "Tüm siparişlerde kullanılabilir. Havale ve EFT aynı hesaba yapılır.",
+      active: true,
+    },
+    {
+      id: "bank-2",
+      bankName: "Türkiye İş Bankası",
+      accountName: "Brothers Teknoloji Ticaret A.Ş.",
+      iban: "TR64 0006 4000 0011 2233 4455 66",
+      branchName: "Moda / İstanbul",
+      branchCode: "1042",
+      accountNumber: "99887766-0003",
+      currency: "TRY",
+      description: "Kurumsal faturalı alımlar için öncelikli hesap.",
+      active: true,
+    },
+    {
+      id: "bank-3",
+      bankName: "Garanti BBVA",
+      accountName: "Brothers Teknoloji Ticaret A.Ş.",
+      iban: "TR12 0006 2000 1234 0006 2978 91",
+      branchName: "Maslak / İstanbul",
+      branchCode: "0429",
+      accountNumber: "6297891-0001",
+      currency: "USD",
+      description: "Yurt dışı ve dövizli ödemeler için kullanılır.",
+      active: true,
+    },
+    {
+      id: "bank-4",
+      bankName: "Yapı Kredi",
+      accountName: "Brothers Teknoloji Ticaret A.Ş.",
+      iban: "TR55 0006 7010 0000 0098 7654 32",
+      branchName: "Beşiktaş / İstanbul",
+      branchCode: "0775",
+      accountNumber: "9876543-0002",
+      currency: "EUR",
+      description: "Avrupa Birliği ülkelerinden gelen döviz ödemeleri için.",
+      active: false,
+    },
+  ],
+};
